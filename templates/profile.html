@@ -6,6 +6,15 @@
 <body>
     <h2>Welcome, {{ username }}!</h2>
     <p>This is your profile page.</p>
+    <form action='/profile' method="post">    
+        <label for="name">Name:</label>
+        <input type="string" name="name" id="name" value= "{{name}}" required><br>
+        <label for="surname">Surname:</label>
+        <input type="string" name="surname" id="surname" value= "{{surname}}" required><br>   
+        <button type="submit">Save</button>  
+    </form>
     <a href="{{ url_for('logout') }}">Logout</a>
+    <br>
+    <a href="{{ url_for('changePassword') }}">Change password</a>
 </body>
 </html>

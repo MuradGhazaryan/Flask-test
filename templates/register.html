@@ -1,17 +1,19 @@
 <!doctype html>
 <html>
 <head>
-    <title>Login</title>
+    <title>register</title>
 </head>
 <body>
-    <h2>Login</h2>
-    <form action='/login' method="post">
+    <h2>register</h2>
+    <form action='/register' method="POST">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required><br>
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" required><br>
+        <label for="repeat_password">Repeat password:</label>
+        <input type="password" name="repeat_password" id="repeat_password" required><br>
         <p style="color: red;">{{error}}</p><br>
-        <button type="submit">Login</button>
+        <button type="submit">register</button>   
     </form>
 </body>
 </html>
